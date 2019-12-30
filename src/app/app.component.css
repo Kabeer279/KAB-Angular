@@ -1,0 +1,35 @@
+.myborder
+{
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: black solid;
+    border-radius: 20px;
+    font-size: 20px;
+    
+}
+.btn
+{
+  width: 200px;
+  margin-left: 44%;
+  border-radius: 10px;
+    
+}
+.form-control
+{
+    border: 1px black solid;
+}
+
+hr{
+    border-top: 2px dashed black;
+  }
+/* 
+  .is-invalid
+  {
+      border: red;
+      outline: red;
+      box-shadow: red;
+      outline-color: red;
+  } */
+  

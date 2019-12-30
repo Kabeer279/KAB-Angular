@@ -1,0 +1,25 @@
+*
+{
+    margin:0;
+    padding: 0;
+
+}
+
+hr{
+    border-top: 2px dashed black;
+   
+  }
+
+.details
+{
+   font-size: 30px;
+   position: absolute;
+   width: 60%;
+   height: 110%;
+   left: 20%;
+   border: black solid;
+   border-radius: 10px;
+   padding: 20px;
+   padding-left: 30px;
+   
+}

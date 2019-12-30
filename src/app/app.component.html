@@ -1,0 +1,89 @@
+<div class="myborder">
+<div class="container-fluid">
+ 
+  <!-- <div class="border"> -->
+    <h2>REGISTRATION FORM</h2>
+    
+<form action="./extra.html" #form="ngForm" required >
+    
+    <!-- {{form.value| json}} -->
+    <hr>
+     
+
+    <div class="form-group">
+   <label>UserName:</label>
+   <input type="text" name="name" class="form-control"  placeholder="Enter the Name"
+   [(ngModel)]="usermodel.name" #name="ngModel" required 
+    [class.is-invalid]="name.invalid && name.touched">
+   <small *ngIf="name.invalid && name.touched" style="color:red">
+    Name is required </small>
+   </div>
+   
+    
+   
+
+    
+   <div class="form-group" >
+    <label>College:</label>
+    <input type="text"  name="college" class="form-control" placeholder="Enter College"
+     [(ngModel)]="usermodel.college"  #college="ngModel" required 
+     [class.is-invalid]="college.invalid && college.touched" >   
+     <small *ngIf="college.invalid && college.touched" style="color:red">
+      College is required </small>
+   </div>
+
+
+
+
+   <div class="form-group" >
+    <label>Roll No:</label>
+    <input type="text"  name="number" class="form-control"  placeholder="Enter Roll-No"
+     [(ngModel)]="usermodel.number" #number="ngModel" required 
+     [class.is-invalid]="number.invalid && number.touched">   
+     <small *ngIf="number.invalid && number.touched" style="color:red">
+      Roll-No is required </small>
+   </div>
+
+     
+     
+   <div class="form-group" >
+    <label>Year:</label>
+    <input type="text" name="year" class="form-control"  placeholder="Enter year"
+     [(ngModel)]="usermodel.year"  #year="ngModel" required 
+     [class.is-invalid]="year.invalid && year.touched">   
+     <small *ngIf="year.invalid && year.touched" style="color:red">
+      Year is required </small>
+   </div>
+
+
+   
+   <div class="form-group" >
+    <label>Email:</label>
+    <input type="text" name="email" class="form-control" placeholder="Enter Email" 
+    [(ngModel)]="usermodel.email" #email="ngModel" required 
+    [class.is-invalid]="email.invalid && email.touched">   
+    <small *ngIf="email.invalid && email.touched" style="color:red">
+      Email is required </small>
+   </div>
+
+
+    <div class="form-group">
+    <label>Phone No:</label>
+    <input type="text" name="phone" class="form-control" placeholder="Enter Phone No" 
+    [(ngModel)]="usermodel.phone" #phone="ngModel" required 
+    [class.is-invalid]="phone.invalid && phone.touched">
+    <small *ngIf="phone.invalid && phone.touched" style="color:red">
+      Phone is required </small>
+    </div>
+    
+
+     
+    <button  [disabled]="form.invalid" (click)="onclick()" class="btn btn-primary " type="submit"> Register</button>
+    
+</form> 
+
+  </div>
+</div>
+
+
+<app-details *ngIf="formSubmit" [model]="form"></app-details>
